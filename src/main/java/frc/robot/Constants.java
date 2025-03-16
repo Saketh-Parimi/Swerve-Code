@@ -7,6 +7,7 @@ package frc.robot;
 import com.ctre.phoenix6.hardware.CANcoder;
 
 import edu.wpi.first.math.util.Units;
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -21,10 +22,18 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
     public static final double DEADBAND = .05;
   }
+  
 
-  public static final double maxSpeed = Units.feetToMeters(4.5);
+  public static final double maxSpeed = Units.feetToMeters(10);
 
   //"absoluteEncoderOffset": 0.81298828125, 
   
+ // Elevator PID Constants (TUNE THESE)
+ public static final double ELEVATOR_kP = 0.1;
+ public static final double ELEVATOR_kI = 0.0;
+ public static final double ELEVATOR_kD = 0.01;
 
+ // Elevator Setpoints
+ public static final double ELEVATOR_LOW = 0.0;  // Lowest position
+ public static final double ELEVATOR_HIGH = 100.0; // Highest position
 }
